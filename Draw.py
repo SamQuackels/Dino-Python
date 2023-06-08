@@ -30,7 +30,7 @@ def drawGame(win ,score, score2, dino, dino2, obstacles, obstacles2, multiplePla
 			textScore = font.render("Score : 0" + str(score), 1, (0,0,0))
 		else:
 			textScore = font.render("Score : " + str(score), 1, (0,0,0))
-		win.blit(textScore, (420, 0))
+		win.blit(textScore, (400, 0))
 		if multiplePlayers:
 			floor = pygame.Rect(0, 370, 600, 3)
 			pygame.draw.rect(win, (50,50,50), floor)
@@ -49,7 +49,7 @@ def drawGame(win ,score, score2, dino, dino2, obstacles, obstacles2, multiplePla
 					textScore = font.render("Score : 0" + str(score2), 1, (0,0,0))
 				else:
 					textScore = font.render("Score : " + str(score2), 1, (0,0,0))
-				win.blit(textScore, (420, 200))
+				win.blit(textScore, (400, 200))
 		pygame.display.update()
 
 def drawDeathScreen(win, score, score2, dino, dino2, obstacles, obstacles2, buttons, multiplePlayers):

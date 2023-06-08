@@ -191,17 +191,17 @@ while running:
 
 		# JUMP
 		if not dino.isJumping and dino.alive:
-			if keys[pygame.K_UP]:
+			if keys[pygame.K_SPACE]:
 				dino.isJumping = True
 		dino.jump()
 		if multiplePlayers:
 			if not dino2.isJumping and dino2.alive:
-				if keys[pygame.K_SPACE]:
+				if keys[pygame.K_UP]:
 					dino2.isJumping = True
 			dino2.jump()
 
 		# BUKKEN
-		if keys[pygame.K_DOWN] and dino.alive:
+		if keys[pygame.K_LCTRL] and dino.alive:
 			dino.ducking = True
 			if dino.m < 1:
 				dino.m *= 1.15
@@ -211,7 +211,7 @@ while running:
 			dino.ducking = False
 
 		if multiplePlayers:
-			if keys[pygame.K_LCTRL] and dino2.alive:
+			if keys[pygame.K_DOWN] and dino2.alive:
 				dino2.ducking = True
 				if dino2.m < 1:
 					dino2.m *= 1.15
